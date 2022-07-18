@@ -7,10 +7,10 @@ for (i = 0; i < 5; i++) {
     selectedRating = this.innerHTML;
     document.querySelector(".no-rating").style.display = "none";
 
-//    for (i = 0; i < 5; i++) {
-//        allButtons[i].classList.remove("rating-button-active");
-//        this.classList.add("rating-button-active");
-//      };
+   for (i = 0; i < 5; i++) {
+       allButtons[i].classList.remove("rating-button-active");
+       this.classList.add("rating-button-active");
+     };
   });
 }
 
