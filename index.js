@@ -9,7 +9,7 @@ for (i = 0; i < 5; i++) {
     for (i = 0; i < 5; i++) {
         allButtons[i].classList.remove("rating-button-active");
         this.classList.add("rating-button-active");
-        document.querySelector(".no-rating").classList.remove("visible");
+        document.querySelector(".no-rating").style.display = "none";
       };
   });
 }
@@ -18,11 +18,9 @@ function submitRating(selectedRating) {
   document.getElementById("rated").innerHTML = selectedRating;
 
   if (selectedRating === undefined) {
-    document.querySelector(".no-rating").classList.add("visible");
+    document.querySelector(".no-rating").style.display = "block";
   } else {
-  document.querySelector(".rating").classList.remove("visible");
-  document.querySelector(".rating").classList.add("hidden");
-  document.querySelector(".thank-you").classList.remove("hidden");
-  document.querySelector(".thank-you").classList.add("visible");
+  document.querySelector(".rating").style.display = "none";
+  document.querySelector(".thank-you").style.display = "block";
   }
 }
