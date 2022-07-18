@@ -61,6 +61,7 @@ p {
   border-radius: 20px;
   border: 0;
   color: hsl(217, 12%, 63%);
+  transition: ease 0.5s;
 }
 
 .rating-button:hover {
@@ -68,10 +69,17 @@ p {
   color: hsl(0, 0%, 100%);
 }
 
+.rating-button:focus {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*
 .rating-button-active {
   background-color: hsl(216, 12%, 54%);
   color: hsl(0, 0%, 100%);
 }
+*/
 
 .submit-row button {
   width: 100%;

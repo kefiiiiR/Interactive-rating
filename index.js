@@ -5,12 +5,12 @@ for (i = 0; i < 5; i++) {
 
   allButtons[i].addEventListener("click", function() {
     selectedRating = this.innerHTML;
+    document.querySelector(".no-rating").style.display = "none";
 
-    for (i = 0; i < 5; i++) {
-        allButtons[i].classList.remove("rating-button-active");
-        this.classList.add("rating-button-active");
-        document.querySelector(".no-rating").style.display = "none";
-      };
+//    for (i = 0; i < 5; i++) {
+//        allButtons[i].classList.remove("rating-button-active");
+//        this.classList.add("rating-button-active");
+//      };
   });
 }
 
