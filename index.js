@@ -1,9 +1,10 @@
+let selectedRating;
+
 for (i = 0; i < 5; i++) {
   const allButtons = document.querySelectorAll(".rating-button");
 
   allButtons[i].addEventListener("click", function() {
-    const selectedRating = this.innerHTML;
-    document.getElementById("rated").innerHTML = selectedRating;
+    selectedRating = this.innerHTML;
 
     for (i = 0; i < 5; i++) {
         allButtons[i].classList.remove("rating-button-active");
@@ -13,8 +14,10 @@ for (i = 0; i < 5; i++) {
   });
 }
 
-function submitRating() {
-  if (document.getElementById("rated").innerHTML < 1) {
+function submitRating(selectedRating) {
+  document.getElementById("rated").innerHTML = selectedRating;
+
+  if (selectedRating === undefined) {
     document.querySelector(".no-rating").classList.add("visible");
   } else {
   document.querySelector(".rating").classList.remove("visible");
