@@ -146,8 +146,8 @@ p {
 
 
 /* MEDIA */
-@media (max-width: 400px) {
+@media (max-width: 375px) {
   .container {
-    width: 85%;
+    width: 80%;
   }
 }
